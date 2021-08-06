@@ -6,9 +6,9 @@
 	request.setCharacterEncoding("utf-8");
 	String uid = request.getParameter("uid");
 	//DB 정보
-	String host ="jdbc:mysql://54.180.160.240:3306/jinhaday";
-	String user ="jinhaday";
-	String pass ="1234";
+   String host ="jdbc:mysql://54.180.160.240:3306/jinhaday";
+   String user ="jinhaday";
+   String pass ="1234";
 	
 	try{
 		// 1단계
@@ -18,7 +18,7 @@
 		// 3단계
 		Statement stmt = conn.createStatement();
 		// 4단계
-		String sql = "DELETE FROM `USER1` WHERE `uid` = '"+uid+"';";
+		String sql = "DELETE FROM `MEMBER` WHERE `uid`='"+uid+"';";
 		stmt.executeUpdate(sql);
 		
 		// 5단계
@@ -30,5 +30,5 @@
 		e.printStackTrace();
 	}
 	// 리다이렉트
-	response.sendRedirect("./4_2_Select.jsp");
+	response.sendRedirect("../list.jsp");
 %>
