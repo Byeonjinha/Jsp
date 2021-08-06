@@ -22,20 +22,23 @@
 		// 3단계	- SQL 실행객체 생성
 		Statement stmt = conn.createStatement();
 		
-		// 4단계	- SQL 실행
-		String sql = "INSERT INTO `USER1` VALUES ('"+uid+"', '"+name+"', '"+hp+"', "+age+");";
-		stmt.executeUpdate(sql);
+		// 4단계
+		String sql = "UPDATE `USER1` SET ";
+			   sql += "`name`='"+name+"',";
+			   sql += "`hp`='"+hp+"',";
+			   sql += "`age`="+age+" ";
+			   sql += "WHERE `uid`='"+uid+"';";
 		
-		// 5단계	- 결과처리(SELECT일 경우)
-		// 6단계	- 데이터베이스 종료
+		stmt.executeUpdate(sql);			   
+			   
+		// 5단계
+		// 6단계
 		stmt.close();
 		conn.close();
 		
 	}catch(Exception e){
 		e.printStackTrace();
 	}
-	
 	// 리다이렉트
 	response.sendRedirect("../4_2_Select.jsp");
-	
 %>

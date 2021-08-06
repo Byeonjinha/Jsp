@@ -4,6 +4,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>4_1_Insert</title>
+	<%--
+		날짜 : 2021/08/05
+		이름 : 변진하
+		내용 : JDBC 프로그래밍 실습하기
+	--%>
 </head>
 <body>
 	<h3>1.Jsp Insert 실습하기</h3>
