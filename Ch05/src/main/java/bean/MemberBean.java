@@ -32,16 +32,17 @@ public class MemberBean {
 	public void setDep(int dep) {
 		this.dep = dep;
 	}
-	public String getRdate() {
-		return Rdate;
-	}
-	public void setRdate(String rdate) {
-		Rdate = rdate;
-	}
+
 	private String uid;
 	private String name;
 	private String hp;
 	private String pos;
 	private int dep;
-	private String Rdate;
+	private String rdate;
+	public String getRdate() {
+		return rdate;
+	}
+	public void setRdate(String rdate) {
+		this.rdate = rdate;
+	}
 }
