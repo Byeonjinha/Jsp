@@ -1,4 +1,3 @@
-<%@page import="kr.co.jboard1.db.Sql"%>
 <%@page import="kr.co.jboard1.db.DBConfig"%>
 <%@page import="com.google.gson.JsonObject"%>
 <%@page import="java.sql.ResultSet"%>
@@ -11,14 +10,16 @@
 	request.setCharacterEncoding("UTF-8");
 	String uid = request.getParameter("uid");
 	
+	// DB정보
+	
 	
 	int result = 0;
 	
 	try{
 		Connection conn =DBConfig.getInstance().getConnection();
 		// 3단계
-		
-		PreparedStatement psmt = conn.prepareStatement(Sql.SELECT_COUNT_NICK);
+		String sql = "SELECT COUNT(`uid`) FROM `Jboard_member` WHERE `uid`=?;";
+		PreparedStatement psmt = conn.prepareStatement(sql);
 		psmt.setString(1, uid);
 		
 		// 4단계
