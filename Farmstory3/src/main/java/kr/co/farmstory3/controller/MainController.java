@@ -20,11 +20,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.co.farmstory3.service.CommonService;
+import kr.co.farmstory3.service.board.CommonService;
 import kr.co.farmstory3.vo.FileVo;
 
 
+
+
 public class MainController extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
 	private Map<String, Object> instances = new HashMap<>();
 
@@ -92,7 +95,7 @@ public class MainController extends HttpServlet {
 		// Service 객체 실행 후 결과 정보 받기
 		String result = instance.requestProc(req, resp);
 		
-		if(result.startsWith("redirect:")) {  // 리다이렉트
+		if(result.startsWith("redirect:")) { // 리다이렉트
 			String redirecUrl = result.substring(9);
 			resp.sendRedirect(path+redirecUrl);
 		}else if(result.startsWith("json:")) { // Json 출력
@@ -136,21 +139,3 @@ public class MainController extends HttpServlet {
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,12 +1,14 @@
 package kr.co.farmstory3.vo;
 
 public class FileVo {
+	
 	private int fseq;
 	private int parent;
 	private String oriName;
 	private String newName;
 	private int download;
 	private String rdate;
+	
 	
 	public int getFseq() {
 		return fseq;

@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,22 +11,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script> 
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="/Farmstory3/js/zipcode.js"></script>
+    <script src="/Farmstory3/js/checkLogin.js"></script>
+    <style>
+    	textarea:focus {
+			outline: none;
+		}
+    </style>
     <script>
         $(function(){
-
             $('.slider > ul').bxSlider({
                 slideWidth: 980,
                 pager: false,
                 controls: false,
                 auto: true
             });
-
             $('#tabs').tabs();
-
         });
     </script>
-
 </head>
 <body>
     <div id="wrapper">
@@ -34,17 +38,15 @@
             <p>
                 <a href="/Farmstory3">HOME |</a>
                 <c:choose>
-                    <c:when test="${sessionScope.sessMember eq null}">
-                         <a href="/Farmstory3/member/login.do">로그인 |</a>
-               			 <a href="/Farmstory3/member/terms.do">회원가입 |</a>
+                    <c:when test="${sessMember eq null}">
+                        <a href="/Farmstory3/member/login.do">로그인 |</a>
                     </c:when>
                     <c:otherwise>
-                    	<a>${sessMember.nick}님, 반갑습니다.|</a>
                         <a href="/Farmstory3/member/logout.do">로그아웃 |</a>
                     </c:otherwise>
                 </c:choose>
-               
-                <a href="#">고객센터</a>
+                <a href="/Farmstory3/member/terms.do">회원가입 |</a>
+                <a href="/Farmstory3/board/list.do?group=Community&cate=qna">고객센터</a>
             </p>
             <img src="/Farmstory3/img/head_txt_img.png" alt="3만원 이상 무료배송"/>
             
@@ -56,16 +58,3 @@
                 <li><a href="/Farmstory3/board/list.do?group=Community&cate=notice">커뮤니티</a></li>
             </ul>
         </header>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        

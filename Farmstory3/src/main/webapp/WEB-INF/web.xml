@@ -7,7 +7,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <!-- 컨트롤러 등록 -->
   <servlet>
   	<servlet-name>MainController</servlet-name>
@@ -53,5 +52,6 @@
   	<filter-name>SetCharacterEncodingFilter</filter-name>
   	<url-pattern>*.do</url-pattern>
   </filter-mapping>
+  
   
 </web-app>

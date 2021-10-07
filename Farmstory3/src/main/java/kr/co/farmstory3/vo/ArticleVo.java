@@ -1,9 +1,6 @@
 package kr.co.farmstory3.vo;
 
-import kr.co.farmstory3.vo.FileVo;
-
 public class ArticleVo {
-
 	private int seq;
 	private int parent;
 	private int comment;
@@ -15,11 +12,9 @@ public class ArticleVo {
 	private String uid;
 	private String regip;
 	private String rdate;
-	
-	// �߰��ʵ�
+	//�߰��ʵ�
 	private String nick;
-	private FileVo fb;
-	
+	private FileVo fb; // ��������� ��ġ�Ƿ� ���Ϻ��ϳ��� ����� ����� ���´� �����ϱ� ���ؼ�!!!
 	public FileVo getFb() {
 		return fb;
 	}
@@ -27,19 +22,14 @@ public class ArticleVo {
 		this.fb = fb;
 	}
 	
-	public String getNick() {
-		return nick;
-	}
-	public void setNick(String nick) {
-		this.nick = nick;
-	}
-	
-	
 	public int getSeq() {
 		return seq;
 	}
 	public void setSeq(int seq) {
 		this.seq = seq;
+	}
+	public void setSeq(String seq) {
+		this.seq = Integer.parseInt(seq);
 	}
 	public int getParent() {
 		return parent;
@@ -47,7 +37,7 @@ public class ArticleVo {
 	public void setParent(int parent) {
 		this.parent = parent;
 	}
-	public void setParent(String parent) {
+	public void setParent(String parent) { //  �����ε�� ���ڿ��� �������հ� �Ѵ� �� �ᱹ ���ڰ� �����ϹǷ� integer���
 		this.parent = Integer.parseInt(parent);
 	}
 	public int getComment() {
@@ -103,5 +93,11 @@ public class ArticleVo {
 	}
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
+	}
+	public void setNick(String nick) {
+		this.nick = nick;
+	}
+	public String getNick() {
+		return nick;
 	}
 }

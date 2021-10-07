@@ -1,9 +1,9 @@
 package kr.co.farmstory3.vo;
 
 public class TermsVo {
-
 	private String terms;
 	private String privacy;
+	
 	
 	public String getTerms() {
 		return terms;
@@ -17,6 +17,5 @@ public class TermsVo {
 	public void setPrivacy(String privacy) {
 		this.privacy = privacy;
 	}
-	
 	
 }

@@ -1,2 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/main/java/kr/co/farmstory3/controller/MainController.java=UTF-8
+encoding//src/main/java/kr/co/farmstory3/dao/ArticleDao.java=UTF-8
+encoding//src/main/java/kr/co/farmstory3/dao/MemberDao.java=UTF-8
+encoding//src/main/java/kr/co/farmstory3/service/board/ListService.java=UTF-8
+encoding//src/main/java/kr/co/farmstory3/service/board/WriteService.java=UTF-8
+encoding//src/main/java/kr/co/farmstory3/service/member/LoginService.java=UTF-8
 encoding//src/main/webapp/css/style.css=UTF-8

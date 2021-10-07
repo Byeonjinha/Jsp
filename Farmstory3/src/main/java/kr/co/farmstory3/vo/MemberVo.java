@@ -1,19 +1,19 @@
 package kr.co.farmstory3.vo;
 
 public class MemberVo {
-
 	private String uid;
 	private String pass;
 	private String name;
 	private String nick;
 	private String email;
 	private String hp;
-	private int    grade;
+	private int grade;
 	private String zip;
-	private String addr1;
-	private String addr2;
+	private String add1;
+	private String add2;
 	private String regip;
 	private String rdate;
+	
 	
 	public String getUid() {
 		return uid;
@@ -63,17 +63,17 @@ public class MemberVo {
 	public void setZip(String zip) {
 		this.zip = zip;
 	}
-	public String getAddr1() {
-		return addr1;
+	public String getAdd1() {
+		return add1;
 	}
-	public void setAddr1(String addr1) {
-		this.addr1 = addr1;
+	public void setAdd1(String add1) {
+		this.add1 = add1;
 	}
-	public String getAddr2() {
-		return addr2;
+	public String getAdd2() {
+		return add2;
 	}
-	public void setAddr2(String addr2) {
-		this.addr2 = addr2;
+	public void setAdd2(String add2) {
+		this.add2 = add2;
 	}
 	public String getRegip() {
 		return regip;
@@ -87,4 +87,5 @@ public class MemberVo {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
+
 }

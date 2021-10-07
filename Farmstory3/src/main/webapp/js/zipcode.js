@@ -1,5 +1,5 @@
 /**
- * 우편번호 검색 함수
+ * 
  */
 function zipcode() {
     new daum.Postcode({
@@ -33,18 +33,18 @@ function zipcode() {
                 if(extraAddr !== ''){
                     extraAddr = ' (' + extraAddr + ')';
                 }
-                // 조합된 참고항목을 해당 필드에 넣는다.
-                //document.getElementById("sample6_extraAddress").value = extraAddr;
+                // 조합된 참고항목을 해당 필드에 넣는다. 안쓰니까 주석처리
+               // document.getElementById("sample6_extraAddress").value = extraAddr;
             
             } else {
-                //document.getElementById("sample6_extraAddress").value = '';
+               // document.getElementById("sample6_extraAddress").value = '';
             }
 
             // 우편번호와 주소 정보를 해당 필드에 넣는다.
-            document.getElementById('zip').value = data.zonecode;
+            document.getElementById('zip').value = data.zonecode; // 특정태그의 id별명을 선택한 값을 들고오는 value
             document.getElementById("addr1").value = addr;
             // 커서를 상세주소 필드로 이동한다.
-            document.getElementById("addr2").focus();
+            document.getElementById("addr2").focus(); // 커서를 포커스하기 위한 메서드 나가는건 ? focusout
         }
     }).open();
 }

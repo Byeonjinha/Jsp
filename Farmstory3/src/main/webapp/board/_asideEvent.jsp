@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+  <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div id="sub">
     <div><img src="/Farmstory3/img/sub_top_tit4.png" alt="EVENT"></div>
@@ -19,6 +19,3 @@
             </nav>
 
             <!-- 내용 시작 -->
-
-
-          
